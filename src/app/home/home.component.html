@@ -1,0 +1,29 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Dashboard</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+    </div>
+
+  </div>
+  <div *ngIf="isDisplay"> Binding 1 chiều {{text}}</div>
+  <label for=""> UpperCase : {{userInfor.username}}</label>
+  <label for="username"> Tài khoản: <input type="text" [(ngModel)]="userInfor.username"></label>
+  <label for="username"> Mật khẩu: <input type="password" [(ngModel)]="userInfor.password"></label>
+  <!-- <label for="username"> Mật khẩu: <input type="password" ngModelChange ="setUppercaseName($event)" [(ngModel)]="userInfor.password"></label> -->
+  <button (click)="register()">Đăng ký</button>
+  <!-- ngFor -->
+  <ol>
+    <li *ngFor="let item of todoList; let i=index">{{item.text}}</li>
+  </ol>
+  <!-- <span [ngSwitch]="userInfor.username">
+    <p *ngSwitchCase="Kien">
+      Kiên thật đập choai
+    </p>
+    <p *ngSwitchCase="Nguyen">
+      Nguyễn chán ngắt
+    </p>
+    <p *ngSwitchDefault>
+      Tên không hay
+    </p>
+  </span> -->
+</main>
