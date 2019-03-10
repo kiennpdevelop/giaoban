@@ -14,6 +14,6 @@ export class TodoService {
   //  Laays danh sachs cacs tasks
   // return this.http.get(this.configUrl);
   getTodoList() {
-    return this.http.get<Array<Todo>>(this.apiUrl);
+   return this.http.get<Array<Todo>>(this.apiUrl);
   }
 }

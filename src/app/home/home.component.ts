@@ -28,10 +28,6 @@ export class HomeComponent implements OnInit {
     this.setCurrentClasses();
     this.setCurrentStyles();
     this.getTasks();
-    // this.todoList = ['Nguyễn Phương Kiên',
-    //   'Nhữ Bảo Vũ',
-    //   'Nguyễn Văn Tuấn'
-    // ];
   }
   setCurrentClasses() {
     this.currentClasses = {
@@ -52,7 +48,7 @@ export class HomeComponent implements OnInit {
     alert(infor);
   }
   getTasks() {
-    return this.todoService.getTodoList().subscribe(result => { this.todoList = result; });
+    // return this.todoService.getTodoList().subscribe(result => { this.todoList = result; });
     // return this.todoService.getTodoList().subscribe(result => this.todoList.push(result) );
   }
 }
